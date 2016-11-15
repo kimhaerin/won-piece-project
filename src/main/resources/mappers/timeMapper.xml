@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!--   namespace : 이름 ; 패키지명까지!  -->
+<mapper namespace="org.zerock.dao.TimeMapper">
+<!-- 	select의 id는 method의 이름처럼! namespace + id까지 합쳐서 경로처럼 됨-->
+	<select id="getTime" resultType="java.lang.String">
+		select now();
+	</select>
+</mapper>

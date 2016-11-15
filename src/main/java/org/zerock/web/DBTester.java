@@ -12,8 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { 
-		"file:src/main/webapp/WEB-INF/spring/root-context.xml" })
+@ContextConfiguration(locations = { "file:src/main/webapp/WEB-INF/spring/root-context.xml" })
 public class DBTester {
 
 	@Inject
@@ -25,7 +24,6 @@ public class DBTester {
 		Connection con = ds.getConnection();
 		System.out.println(con);
 		con.close();
-
 	}
 
 	@Test
@@ -34,7 +32,7 @@ public class DBTester {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 
 		Connection con = DriverManager.getConnection(
-				"jdbc:mysql://192.168.0.51:3306/bit88?useSSL=false&serverTimezone=Asia/Seoul", "zerock", "zerock");
+				"jdbc:mysql://192.168.0.34:3306/bit88?useSSL=false&serverTimezone=Asia/Seoul", "makemoney", "makemoney");
 
 		System.out.println(con);
 		con.close();
