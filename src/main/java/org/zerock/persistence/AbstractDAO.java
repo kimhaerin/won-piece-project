@@ -26,8 +26,8 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	}
 
 	@Override
-	public void update(E userid) throws Exception {
-		sqlSession.selectOne(NAME + ".update", userid);
+	public void update(E vo) throws Exception {
+		sqlSession.selectOne(NAME + ".update", vo);
 
 	}
 

@@ -17,11 +17,11 @@
 		= #{userid}
 	</select>
 
-	<delete id="delete">
+	<delete id="delete" parameterType="SmemVO">
 		delete from tbl_smem where userid = #{userid}
 	</delete>
 	
-	<update id="update">
+	<update id="update" parameterType="SmemVO">
 		update tbl_smem set userpw = #{userpw}
 		where userid = #{userid}
 	</update>
