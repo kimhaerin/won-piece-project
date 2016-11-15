@@ -13,7 +13,17 @@
 	</insert>
 
 	<select id="read" resultType="SmemVO">
-		select * from tbl_smem where userid = #{userid}
+		select * from tbl_smem where userid
+		= #{userid}
 	</select>
+
+	<delete id="delete">
+		delete from tbl_smem where userid = #{userid}
+	</delete>
+	
+	<update id="update">
+		update tbl_smem set userpw = #{userpw}
+		where userid = #{userid}
+	</update>
 
 </mapper>

@@ -20,20 +20,20 @@ public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	}
 
 	@Override
-	public E read(K tno) throws Exception {
-		return sqlSession.selectOne(NAME + ".read", tno);
+	public E read(K userid) throws Exception {
+		return sqlSession.selectOne(NAME + ".read", userid);
 		
 	}
 
 	@Override
-	public void update(E vo) throws Exception {
-		// TODO Auto-generated method stub
+	public void update(E userid) throws Exception {
+		sqlSession.selectOne(NAME + ".update", userid);
 
 	}
 
 	@Override
-	public void delete(K tno) throws Exception {
-		// TODO Auto-generated method stub
+	public void delete(K userid) throws Exception {
+		sqlSession.selectOne(NAME + ".delete", userid);
 
 	}
 
