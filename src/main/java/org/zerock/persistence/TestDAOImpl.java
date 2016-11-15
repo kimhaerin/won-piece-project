@@ -11,10 +11,13 @@ public class TestDAOImpl implements TestDAO {
 
 	@Inject
 	private SqlSession sqlSession;
+	
+	private final String NAME = "org.zerock.dao.TestMapper";
 
 	@Override
 	public void create(TestVO vo) throws Exception {
-		// TODO Auto-generated method stub
+		
+		sqlSession.insert(NAME + ".create", vo);
 
 	}
 
