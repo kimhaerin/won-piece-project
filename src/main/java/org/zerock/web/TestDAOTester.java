@@ -25,9 +25,19 @@ public class TestDAOTester {
 	public void testInsert() throws Exception{
 		
 		TestVO vo = new TestVO();
-		vo.setTname("yym");
+		vo.setTname("kjs");
 		dao.create(vo);
 		
 	}
+	
+	@Test
+	public void testRead() throws Exception{
+		
+		TestVO vo = new TestVO();
+		dao.read(1);
+		
+	}
+	
+	
 
 }

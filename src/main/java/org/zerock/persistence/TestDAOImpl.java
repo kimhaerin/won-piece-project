@@ -7,36 +7,8 @@ import org.springframework.stereotype.Repository;
 import org.zerock.domain.TestVO;
 
 @Repository
-public class TestDAOImpl implements TestDAO {
+public class TestDAOImpl extends AbstractDAO<TestVO, Integer> implements TestDAO {
 
-	@Inject
-	private SqlSession sqlSession;
-	
 	private final String NAME = "org.zerock.dao.TestMapper";
-
-	@Override
-	public void create(TestVO vo) throws Exception {
-		
-		sqlSession.insert(NAME + ".create", vo);
-
-	}
-
-	@Override
-	public TestVO read(Integer tno) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void update(TestVO vo) throws Exception {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void delete(Integer tno) throws Exception {
-		// TODO Auto-generated method stub
-
-	}
 
 }
