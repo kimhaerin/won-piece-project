@@ -17,7 +17,7 @@ public class TestDAOTester {
 	
 	@Test
 	public void testDAO1(){
-		
+		System.out.println(dao);
 	}
 
 }
