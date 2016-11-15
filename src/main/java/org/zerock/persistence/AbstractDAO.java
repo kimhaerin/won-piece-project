@@ -8,9 +8,9 @@ import org.zerock.domain.TestVO;
 public abstract class AbstractDAO<E, K> implements GenericDAO<E, K> {
 	
 	@Inject
-	private SqlSession sqlSession;
+	protected SqlSession sqlSession;
 	
-	private final String NAME = "org.zerock.dao.TestMapper";
+	protected String NAME;
 
 	@Override
 	public void create(E vo) throws Exception {

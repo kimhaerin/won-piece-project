@@ -9,6 +9,8 @@ import org.zerock.domain.TestVO;
 @Repository
 public class TestDAOImpl extends AbstractDAO<TestVO, Integer> implements TestDAO {
 
-	private final String NAME = "org.zerock.dao.TestMapper";
+	public TestDAOImpl(){
+		this.NAME = "org.zerock.dao.TestMapper";
+	}
 
 }

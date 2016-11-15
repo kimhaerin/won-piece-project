@@ -1,6 +1,6 @@
 package org.zerock.persistence;
 
-import org.zerock.domain.TestVO;
+import org.zerock.domain.SmemVO;
 
 public interface GenericDAO<E, K> {
 	
